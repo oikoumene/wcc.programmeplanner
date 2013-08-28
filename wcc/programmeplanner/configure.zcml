@@ -20,6 +20,14 @@
         name="wcc.programmeplanner"
         directory="static"/>
 
+    <class class="plone.app.collection.collection.Collection">
+        <implements interface="wcc.programmeplanner.interfaces.IProgrammeSearchCapable"/>
+    </class>
+
+    <class class="Products.ATContentTypes.content.topic.ATTopic">
+        <implements interface="wcc.programmeplanner.interfaces.IProgrammeSearchCapable"/>
+    </class>
+
     <!-- -*- extra stuff goes here -*- -->
 
 </configure>
