@@ -5,3 +5,6 @@ class IProductSpecific(Interface):
 
 class IProgrammeSearchCapable(Interface):
     pass
+
+class IProgrammeFieldsEnabled(Interface):
+    pass

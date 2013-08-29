@@ -8,10 +8,46 @@
 <head>
 </head>
 <body>
-  <div metal:fill-slot="content-core">
-    <div metal:define-macro="content-core">
-        Hello World
+    <div metal:fill-slot="content-core">
+        <div metal:define-macro="content-core">
+
+            <div class="quicksearch">
+                <h3>Quick Search</h3>
+                <p>The rich offering of events at the assembly is intended  to maximize sharing among participants - to deepen
+                    their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide
+                    space for dialogue on important issues</p>
+
+                <form method="GET">
+                    <input name="search"/> <input type="submit" value="Search"/>
+                </form>        
+            </div>
+
+            <div class="advancedsearch">
+                <h3>Advanced Search</h3>
+                <p>The rich offering of events at the assembly is intended  to maximize sharing among participants - to deepen
+                    their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide
+                    space for dialogue on important issues</p>
+                <form method="GET">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:50%">
+                                <label for="focus_group">Focus group</label>
+                                <select name="focus_group">
+                                    <option value="all">ALL</option>
+                                </select>
+                                <label for="event_type">Type of event</label>
+                                <select name="event_type">
+                                    <option value="all">ALL</option>
+                                </select>
+                            </td>
+                            <td>
+                         
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
 </body>
 </html>

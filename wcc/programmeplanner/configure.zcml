@@ -28,6 +28,10 @@
         <implements interface="wcc.programmeplanner.interfaces.IProgrammeSearchCapable"/>
     </class>
 
+    <class class="Products.ATContentTypes.content.event.ATEvent">
+        <implements interface="wcc.programmeplanner.interfaces.IProgrammeFieldsEnabled"/>
+    </class>
+
     <!-- -*- extra stuff goes here -*- -->
 
 </configure>
