@@ -12,23 +12,19 @@ class FocusGroup(grok.GlobalUtility):
     _terms = [{
         'value': 'inter-religious',
         'title': 'Inter Religious',
-        'token': 'inter-religious',
     },{
         'value': 'gender',
         'title': 'Gender',
-        'token': 'gender',
     },{
         'value': 'indigenous-people',
         'title': 'Indigenous People',
-        'token': 'indigenous-people',
     },{
         'value': 'youth',
         'title': 'Youth',
-        'token': 'youth',
     }]
 
     def __call__(self, context):
         terms = []
         for i in self._terms:
-            terms.append(SimpleTerm(*i))
+            terms.append(SimpleTerm(**i))
         return SimpleVocabulary(terms)

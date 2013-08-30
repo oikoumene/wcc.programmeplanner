@@ -12,23 +12,19 @@ class EventType(grok.GlobalUtility):
     _terms = [{
         'value': 'madang-workshop',
         'title': 'Madang Workshop',
-        'token': 'madang-workshop',
     },{
         'value': 'madang-performance',
         'title': 'Madang Performance',
-        'token': 'madang-performance',
     },{
         'value': 'bible-study-prayer',
         'title': 'Bible Study / Prayer',
-        'token': 'bible-study-prayer',
     },{
         'value': 'ecumenical-conversation',
         'title': 'Ecumenical Conversation',
-        'token': 'ecumenical-conversation',
     }]
 
     def __call__(self, context):
         terms = []
         for i in self._terms:
-            terms.append(SimpleTerm(*i))
+            terms.append(SimpleTerm(**i))
         return SimpleVocabulary(terms)

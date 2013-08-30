@@ -31,17 +31,34 @@
                     <table style="width:100%">
                         <tr>
                             <td style="width:50%">
+                                <div>
                                 <label for="focus_group">Focus group</label>
                                 <select name="focus_group">
                                     <option value="all">ALL</option>
+                                    <option tal:repeat="term view/focus_groups"
+                                        tal:attributes="value term/value"
+                                        tal:content="term/title">
+                                    </option>
                                 </select>
+                            </div>
+                            <div>
                                 <label for="event_type">Type of event</label>
                                 <select name="event_type">
                                     <option value="all">ALL</option>
                                 </select>
+                            </div>
                             </td>
                             <td>
-                         
+                                <label for="dates">Day</label>
+                                <tal:r repeat="day view/dates">
+                                    <div style="date-checkbox">
+                                    <input 
+                                        name="dates"
+                                        type="checkbox"
+                                        tal:attributes="value day/value"/>
+                                    <span tal:content="day/title"></span>
+                                    </div>
+                                </tal:r>
                             </td>
                         </tr>
                     </table>
