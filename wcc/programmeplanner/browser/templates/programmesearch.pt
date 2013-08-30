@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="wcc.programmeplanner"
+      metal:use-macro="context/main_template/macros/master">
+<head>
+</head>
+<body>
+  <div metal:fill-slot="content-core">
+    <div metal:define-macro="content-core">
+        <table class="listing">
+            <thead>
+                <tr><th>Day</th>
+                    <th>Schedule</th>
+                    <th>Event Type</th>
+                    <th>Event Details</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr tal:repeat="item view/results">
+                <td tal:content="item/day"></td>
+                <td tal:content="item/schedule"></td>
+                <td tal:content="item/event_type"></td>
+                <td>
+                    <h4 tal:content="item/title"></h4>
+                    <p tal:content="item/description"></p>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+</body>
+</html>
