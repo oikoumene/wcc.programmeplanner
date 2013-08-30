@@ -11,7 +11,13 @@ class ProgrammeSearch(grok.View):
     grok.template('programmesearch')
 
     def _raw_results(self):
-        params = {'portal_type':'Event'}
+        params = {
+            'portal_type':'wcc.programmeplanner.programme',
+            'path': {
+                'query': '/'.join(self.context.getPhysicalPath()),
+                'depth': 5
+            }
+        }
 
         search = self.request.get('search', '')
         if search:
