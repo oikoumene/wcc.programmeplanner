@@ -29,15 +29,12 @@ class IProgramme(form.Schema, IImageScaleTraversable):
     """
     
     """
-    
-    languageindependent('date')
-    date = schema.Date(title=_(u'Date'))
 
-    languageindependent('startTime')
-    startTime = schema.Time(title=_(u'Start Time'))
+    languageindependent('startDate')
+    startDate = schema.Datetime(title=_(u'Start Date'))
 
-    languageindependent('endTime')
-    endTime = schema.Time(title=_(u'End Time'))
+    languageindependent('endDate')
+    endDate = schema.Datetime(title=_(u'End Date'))
 
     languageindependent('event_type')
     event_type = schema.Choice(
