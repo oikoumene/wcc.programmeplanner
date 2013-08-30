@@ -32,6 +32,10 @@
                         <tr>
                             <td style="width:50%">
                                 <div>
+                                    <label for="search">Search Keyword</label>
+                                    <input name="search"/>
+                                </div>
+                                <div>
                                 <label for="focus_group">Focus group</label>
                                 <select name="focus_group">
                                     <option value="all">ALL</option>
@@ -59,6 +63,11 @@
                                     <span tal:content="day/title"></span>
                                     </div>
                                 </tal:r>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                               <input type="submit" value="Search"/> 
                             </td>
                         </tr>
                     </table>
