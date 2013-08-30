@@ -12,6 +12,9 @@ from wcc.programmeplanner.interfaces import IProgrammeFieldsEnabled
 # Visit http://pypi.python.org/pypi/archetypes.schemaextender for full 
 # documentation on writing extenders
 
+class ExtensionStringField(ExtensionField, atapi.StringField):
+    pass
+
 class ProgrammeFields(grok.Adapter):
 
     # This applies to all AT Content Types, change this to
@@ -25,19 +28,25 @@ class ProgrammeFields(grok.Adapter):
 
     fields = [
         # add your extension fields here
-        atapi.StringField(
+        ExtensionStringField(
             'event_type',
-            vocabulary='wcc.programmeplanner.event_type',
+            vocabulary_factory='wcc.programmeplanner.event_type',
+            storage=atapi.AttributeStorage(),
             widget=atapi.SelectionWidget(
                 label=u'Event Type'
-            )
+            ),
+            required=False,
+            schemata='default'
         ),
-        atapi.StringField(
+        ExtensionStringField(
             'focus_group',
-            vocabulary='wcc.programmeplanner.focus_group',
+            vocabulary_factory='wcc.programmeplanner.focus_group',
+            storage=atapi.AttributeStorage(),
             widget=atapi.SelectionWidget(
                 label=u'Focus Group',
-            )
+            ),
+            required=False,
+            schemata='default'
         )
     ]
 
