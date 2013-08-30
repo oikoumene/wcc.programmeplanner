@@ -8,5 +8,6 @@
   -->
 <object name="portal_types" meta_type="Plone Types Tool">
   <!-- -*- extra stuff goes here -*- -->
+  <object name="wcc.programmeplanner.programme" meta_type="Dexterity FTI" />
   <object name="wcc.programmeplanner.programmeplanner" meta_type="Dexterity FTI" />
 </object>
