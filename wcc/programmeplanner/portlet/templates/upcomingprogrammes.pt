@@ -1,0 +1,21 @@
+<dl class="portlet portletUpcomingProgrammes"
+    i18n:domain="wcc.programmeplanner">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        <span tal:content="view/data/title"/>
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem">
+        <div tal:repeat="item view/upcoming">
+            <h1 tal:content="item/Title"></h1>
+        </div>
+    </dd>
+
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+
+</dl>

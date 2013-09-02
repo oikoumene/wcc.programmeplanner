@@ -5,5 +5,13 @@
 
     <include package="plone.app.portlets" file="permissions.zcml"/>
     <!-- -*- extra stuff goes here -*- -->
+    <plone:portlet
+        name="wcc.programmeplanner.portlet.UpcomingProgrammes"
+        interface=".upcomingprogrammes.IUpcomingProgrammes"
+        assignment=".upcomingprogrammes.Assignment"
+        renderer=".upcomingprogrammes.Renderer"
+        addview=".upcomingprogrammes.AddForm"
+        editview=".upcomingprogrammes.EditForm"
+        />
 
 </configure>

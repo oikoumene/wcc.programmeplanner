@@ -2,5 +2,9 @@
 <portlets>
 
     <!-- -*- extra stuff goes here -*- -->
+ <portlet 
+   addview="wcc.programmeplanner.portlet.UpcomingProgrammes"
+   title="Upcoming Programmes"
+   description=""/>
 
 </portlets>
