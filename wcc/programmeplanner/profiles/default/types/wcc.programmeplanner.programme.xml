@@ -25,6 +25,7 @@
      <element value="plone.app.referenceablebehavior.referenceable.IReferenceable"/>
      <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/>
      <element value="plone.app.versioningbehavior.behaviors.IVersionable"/>
+     <element value="wcc.featurable.behavior.featurable.IFeaturable"/>
    </property>
 
   <!-- View information -->
