@@ -10,7 +10,7 @@
 <body>
   <div metal:fill-slot="content-core">
     <div metal:define-macro="content-core">
-        <table class="listing">
+        <table class="listing" style="width:100%">
             <thead>
                 <tr><th>Day</th>
                     <th>Schedule</th>

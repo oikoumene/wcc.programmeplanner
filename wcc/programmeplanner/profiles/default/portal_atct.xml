@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<atcttool
+ xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+ <topic_indexes>
+ <index name="focus_group"
+     description="Focus Group"
+     enabled="True" friendlyName="Focus Group">
+     <criteria>ATSelectionCriterion</criteria>
+     <criteria>ATSimpleStringCriterion</criteria>
+ </index>
+ <index name="event_type"
+     description="Event Type"
+     enabled="True" friendlyName="Event Type">
+     <criteria>ATSelectionCriterion</criteria>
+     <criteria>ATSimpleStringCriterion</criteria>
+ </index>
+ </topic_indexes>
+ <topic_metadata>
+     <metadata name="focus_group"
+               description="Focus Group" enabled="True"
+               friendlyName="Focus Group"/>
+    <metadata name="event_type"
+               description="Event Type" enabled="True"
+               friendlyName="Event Type"/>
+ </topic_metadata>
+</atcttool>

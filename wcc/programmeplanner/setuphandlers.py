@@ -9,5 +9,6 @@ def setupVarious(context):
     if context.readDataFile('wcc.programmeplanner.marker.txt') is None:
         return
     portal = context.getSite()
-
+    portal.portal_catalog.reindexIndex('event_type', portal.REQUEST)
+    portal.portal_catalog.reindexIndex('focus_group', portal.REQUEST)
     # do anything here

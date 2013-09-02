@@ -1,0 +1,14 @@
+<registry>
+  <records interface="plone.app.querystring.interfaces.IQueryField"
+           prefix="wcc.programmeplanner.programme.field.focus_group">
+    <value key="title">Focus Group</value>
+    <value key="description">Focus Group</value>
+    <value key="enabled">True</value>
+    <value key="sortable">False</value>
+    <value key="operations">
+        <element>plone.app.querystring.operation.selection.is</element>
+        <element>plone.app.querystring.operation.string.is</element>
+    </value>
+    <value key="group">Metadata</value>
+  </records>
+</registry>

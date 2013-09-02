@@ -1,6 +1,7 @@
 from five import grok
 from Products.CMFCore.interfaces import IContentish
 from dateutil.parser import parser as dateparser
+from DateTime import DateTime
 
 grok.templatedir('templates')
 
@@ -23,20 +24,33 @@ class ProgrammeSearch(grok.View):
         if search:
             params['SearchableText'] = search
 
-        event_type = self.request.get('event_type', '')
-        if event_type:
-            params['wcc_event_type'] = event_type
+        event_type = self.request.get('event_type', '').strip()
+        if event_type and event_type != 'all':
+            params['event_type'] = event_type
 
-        results = set()
+
+        focus_group = self.request.get('focus_group', '').strip()
+        if focus_group and focus_group != 'all':
+            params['focus_group'] = focus_group
+
+        results = []
 
         dates = self.request.get('dates', [])
+        if not dates:
+            results = self.context.portal_catalog(**params)
+            return list(sorted(results, key=lambda x:x.start))
+
         for date in dates:
-            dt = dateparser(date)
+            ds = DateTime('%s 00:00' % date)
+            de = DateTime('%s 23:59' % date)
             p = params.copy()
-            p['start'] = date
-            brains = self.context.portal_catalog(**params)
+            p['start'] = {'query': (ds, de), 'range': 'min:max'}
+            brains = self.context.portal_catalog(**p)
             for brain in brains:
-                results.add(brain)
+                if brain.getPath() in [
+                    r.getPath() for r in results]:
+                    continue
+                results.append(brain)
 
         return list(sorted(results, key=lambda x:x.start))
 

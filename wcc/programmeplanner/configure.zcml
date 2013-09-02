@@ -20,6 +20,9 @@
         name="wcc.programmeplanner"
         directory="static"/>
 
+    <adapter name="start" factory=".indexer.programme_start"/>
+    <adapter name="end" factory=".indexer.programme_end"/>
+
     <!-- -*- extra stuff goes here -*- -->
 
 </configure>
