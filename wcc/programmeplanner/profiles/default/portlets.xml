@@ -3,6 +3,10 @@
 
     <!-- -*- extra stuff goes here -*- -->
  <portlet 
+   addview="wcc.programmeplanner.portlet.ProgrammeHighlight"
+   title="Programme Highlight"
+   description=""/>
+ <portlet 
    addview="wcc.programmeplanner.portlet.UpcomingProgrammes"
    title="Upcoming Programmes"
    description=""/>

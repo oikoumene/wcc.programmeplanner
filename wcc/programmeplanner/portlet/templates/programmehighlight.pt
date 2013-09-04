@@ -1,0 +1,25 @@
+<dl class="portlet portletProgrammeHighlight"
+    i18n:domain="wcc.programmeplanner">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        Today's Highlight
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem">
+        <div tal:define="item view/highlight" tal:condition="item">
+            <b><a tal:attributes="href item/absolute_url"
+                    tal:content="item/Title"></a></b>
+        </div>
+    </dd>
+
+    <dd class="portletFooter" tal:define="planner view/programmeplanner">
+        <span class="portletBottomLeft"></span>
+        <a tal:condition="planner" tal:attributes="href planner/absolute_url">
+            Go to programme planner
+        </a>
+        <span class="portletBottomRight"></span>
+    </dd>
+
+</dl>
