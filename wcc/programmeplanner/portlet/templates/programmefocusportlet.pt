@@ -1,0 +1,21 @@
+<dl class="portlet portletProgrammeFocusPortlet"
+    i18n:domain="wcc.programmeplanner">
+
+    <dt class="portletHeader">
+        <span class="portletTopLeft"></span>
+        Programmes related to <span tal:content="view/focus_group"></span> 
+        <span class="portletTopRight"></span>
+    </dt>
+
+    <dd class="portletItem">
+        <div tal:repeat="item view/items">
+            <b tal:content="item/Title"></b>
+        </div>
+    </dd>
+
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+
+</dl>

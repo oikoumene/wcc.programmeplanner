@@ -6,6 +6,14 @@
     <include package="plone.app.portlets" file="permissions.zcml"/>
     <!-- -*- extra stuff goes here -*- -->
     <plone:portlet
+        name="wcc.programmeplanner.portlet.ProgrammeFocusPortlet"
+        interface=".programmefocusportlet.IProgrammeFocusPortlet"
+        assignment=".programmefocusportlet.Assignment"
+        renderer=".programmefocusportlet.Renderer"
+        addview=".programmefocusportlet.AddForm"
+        editview=".programmefocusportlet.EditForm"
+        />
+    <plone:portlet
         name="wcc.programmeplanner.portlet.ProgrammeHighlight"
         interface=".programmehighlight.IProgrammeHighlight"
         assignment=".programmehighlight.Assignment"
