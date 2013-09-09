@@ -55,7 +55,7 @@ class Renderer(base.Renderer):
 
     @property
     def available(self):
-        return True
+        return True if self.highlight() else False
 
 
     def programmeplanner(self):
