@@ -5,7 +5,20 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="wcc.programmeplanner"
       metal:use-macro="context/main_template/macros/master">
-<head>
+      <head>
+
+          <metal:slot fill-slot="style_slot">
+            <style>
+                .advancedsearch .search-field {
+                    padding:5px 10px;
+                }
+
+                .advancedsearch .search-field label {
+                    width: 150px;
+                    display:inline-block;
+                }
+            </style>
+          </metal:slot>
 </head>
 <body>
     <div metal:fill-slot="content-core">
@@ -33,11 +46,11 @@
                     <table style="width:100%">
                         <tr>
                             <td style="width:50%">
-                                <div>
+                                <div class="search-field"> 
                                     <label for="search">Search Keyword</label>
                                     <input name="search"/>
                                 </div>
-                                <div>
+                                <div class="search-field">
                                 <label for="focus_group">Focus group</label>
                                 <select name="focus_group">
                                     <option value="all">ALL</option>
@@ -47,7 +60,7 @@
                                     </option>
                                 </select>
                             </div>
-                            <div>
+                            <div class="search-field">
                                 <label for="event_type">Type of event</label>
                                 <select name="event_type">
                                     <option value="all">ALL</option>
