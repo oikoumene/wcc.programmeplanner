@@ -10,7 +10,13 @@
 <body>
   <div metal:fill-slot="content-core">
     <div metal:define-macro="content-core">
-        <table class="listing" style="width:100%">
+        <table class="listing search-result">
+            <colgroup>
+                <col style="width: 25%">
+                <col style="width: 25%">
+                <col style="width: 15%">
+                <col style="width: 35%">
+            </colgroup>
             <thead>
                 <tr><th>Day</th>
                     <th>Schedule</th>
@@ -25,7 +31,7 @@
                 <td tal:content="item/event_type"></td>
                 <td>
                     <h4 tal:content="item/title"></h4>
-                    <p tal:content="item/description"></p>
+                    <p class="event-desc" tal:content="item/description"></p>
                 </td>
             </tr>
             </tbody>
