@@ -43,9 +43,11 @@ class IProgramme(form.Schema, IImageScaleTraversable):
     )
 
     languageindependent('focus_group')
-    focus_group = schema.Choice(
-        title=_(u'Event Type'),
-        vocabulary='wcc.programmeplanner.focus_group'
+    focus_group = schema.List(
+        title=_(u'Focus Group'),
+        value_type=schema.Choice(
+            vocabulary='wcc.programmeplanner.focus_group'
+        )
     )
 
     dexteritytextindexer.searchable('text')
