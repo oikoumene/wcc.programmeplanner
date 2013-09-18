@@ -1,5 +1,7 @@
 from collective.grok import gs
 from Products.CMFCore.utils import getToolByName
+from DateTime import DateTime
+import time
 
 # -*- extra stuff goes here -*- 
 
@@ -20,4 +22,17 @@ def to2(context):
         obj = brain.getObject()
         if isinstance(obj.focus_group, str):
             obj.focus_group = [obj.focus_group]
+        if getattr(obj, 'startDate', None):
+            if isinstance(obj.startDate, DateTime):
+                sd = obj.startDate.asdatetime()
+            else:
+                sd = obj.startDate
+            obj.date = sd.date()
+            obj.startTime = sd.strftime('%H:00')
+        if getattr(obj, 'endDate', None):
+            if isinstance(obj.endDate, DateTime):
+                ed = obj.endDate.asdatetime()
+            else:
+                ed = obj.endDate
+            obj.endTime = ed.strftime('%H:00')
         obj.reindexObject()

@@ -24,3 +24,9 @@ class Index(dexterity.DisplayForm):
         factory = getUtility(IVocabularyFactory,
                 name='wcc.programmeplanner.programme_dates')
         return factory(self.context)
+
+    def times(self):
+        factory = getUtility(IVocabularyFactory,
+                name='wcc.programmeplanner.programme_times')
+        return factory(self.context)
+           

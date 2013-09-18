@@ -2,8 +2,16 @@ from five import grok
 from Products.CMFCore.interfaces import IContentish
 from dateutil.parser import parser as dateparser
 from DateTime import DateTime
-
+import time
+import dateutil.tz
+import datetime
 grok.templatedir('templates')
+
+def get_timezone():
+    localtz = dateutil.tz.tzlocal()
+    localoffset = localtz.utcoffset(datetime.datetime.now())
+    return (localoffset.days * 86400 + localoffset.seconds) / 3600
+
 
 class ProgrammeSearch(grok.View):
     grok.context(IContentish)
@@ -38,11 +46,11 @@ class ProgrammeSearch(grok.View):
         dates = self.request.get('dates', [])
         if not dates:
             results = self.context.portal_catalog(**params)
-            return list(sorted(results, key=lambda x:x.start))
 
+        tz = get_timezone()
         for date in dates:
-            ds = DateTime('%s 00:00' % date)
-            de = DateTime('%s 23:59' % date)
+            ds = DateTime('%s 00:00 GMT%+d' % (date, tz))
+            de = DateTime('%s 23:59 GMT%+d' % (date, tz))
             p = params.copy()
             p['start'] = {'query': (ds, de), 'range': 'min:max'}
             brains = self.context.portal_catalog(**p)
@@ -52,6 +60,10 @@ class ProgrammeSearch(grok.View):
                     continue
                 results.append(brain)
 
+        start_time = self.request.get('start_time', '').strip()
+        if start_time and start_time != 'all':
+            results = [i for i in results if i.getObject().startTime==start_time]
+
         return list(sorted(results, key=lambda x:x.start))
 
     def results(self):
@@ -59,10 +71,10 @@ class ProgrammeSearch(grok.View):
         for b in self._raw_results():
             o = b.getObject()
             item = {
-                'day': o.startDate.strftime('%A %d %B %Y'),
+                'day': o.date.strftime('%A %d %B %Y'),
                 'schedule': '%s - %s' % (
-                    o.startDate.strftime('%r'),
-                    o.endDate.strftime('%r')
+                    o.startTime,
+                    o.endTime
                 ),
                 'event_type': getattr(o, 'event_type', ''),
                 'title': o.Title(),

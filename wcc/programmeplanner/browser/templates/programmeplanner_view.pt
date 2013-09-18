@@ -58,6 +58,16 @@
                                     <option value="all">ALL</option>
                                 </select>
                             </div>
+                            <div class="search-field">
+                                <label for="start_time">Start From</label>
+                                <select name="start_time">
+                                    <option value="all">--:--</option>
+                                    <option tal:repeat="term view/times"
+                                        tal:attributes="value term/value"
+                                        tal:content="term/title">
+                                    </option>
+                                </select>
+                            </div>
                             </td>
                             <td>
                                 <label for="dates">Day</label>

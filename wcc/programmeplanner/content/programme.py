@@ -29,12 +29,19 @@ class IProgramme(form.Schema, IImageScaleTraversable):
     """
     
     """
+    
+    languageindependent('date')
+    date = schema.Date(title=_(u'Date'))
 
-    languageindependent('startDate')
-    startDate = schema.Datetime(title=_(u'Start Date'))
+    languageindependent('startTime')
+    startTime = schema.Choice(title=_(u'Start Time'),
+        vocabulary='wcc.programmeplanner.programme_times'
+    )
 
-    languageindependent('endDate')
-    endDate = schema.Datetime(title=_(u'End Date'))
+    languageindependent('endTime')
+    endTime = schema.Choice(title=_(u'End Time'),
+        vocabulary='wcc.programmeplanner.programme_times'
+    )
 
     languageindependent('event_type')
     event_type = schema.Choice(
