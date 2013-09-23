@@ -25,7 +25,7 @@
             <tr tal:repeat="item view/results">
                 <td tal:content="item/day"></td>
                 <td tal:content="item/schedule"></td>
-                <td tal:content="item/event_type" tal:attributes="class python: '.' + item['event_type']"></td>
+                <td tal:content="item/event_type" tal:attributes="class item/event_type"></td>
                 <td>
                     <h4 tal:content="item/title"></h4>
                     <p tal:content="item/description"></p>
