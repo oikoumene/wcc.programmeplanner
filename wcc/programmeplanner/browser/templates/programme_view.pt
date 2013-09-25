@@ -6,10 +6,29 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="wcc.programmeplanner">
 <body>
+<head>
+     <metal:block fill-slot="style_slot">
+         <link rel="stylesheet" href="++resource++wcc.programmeplanner/css/style.css"/>
+     </metal:block>
+</head>
 
 <metal:main fill-slot="content-core">
   <metal:content-core define-macro="content-core">
-
+      
+      <div class="p-top-info-container">
+            <div class="p-date-container">
+                  <img src="" alt="50px50px icon" />
+                  <div class="p-date">
+                        <span class="p-day">Wednesday</span>
+                        <span class="p-date">30 Oct 2013</span>
+                        <span class="p-hours">8:00am - 9:00</span>
+                  </div>
+            </div>
+            <div class="p-description">
+                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            </div>
+      </div>
+      
       <div tal:content="structure context/text"/>
 
       <div class="visualClear">&nbsp;</div>

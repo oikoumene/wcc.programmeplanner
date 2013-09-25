@@ -5,20 +5,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="wcc.programmeplanner"
       metal:use-macro="context/main_template/macros/master">
-      <head>
-
-          <metal:slot fill-slot="style_slot">
-            <style>
-                .advancedsearch .search-field {
-                    padding:5px 10px;
-                }
-
-                .advancedsearch .search-field label {
-                    width: 150px;
-                    display:inline-block;
-                }
-            </style>
-          </metal:slot>
+<head>
 </head>
 <body>
     <div metal:fill-slot="content-core">
@@ -26,64 +13,67 @@
 
             <div class="quicksearch">
                 <h3>Quick Search</h3>
-                <p>Search for a word / expression in the events titles and descriptions.</p>
+                <p>The rich offering of events at the assembly is intended  to maximize sharing among participants - to deepen
+                    their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide
+                    space for dialogue on important issues</p>
 
                 <form method="GET" 
                     tal:attributes="action string:${context/absolute_url}/programmesearch">
-                    <input name="search"/> <input type="submit" value="Search"/>
+                    <input type="text" name="search" placeholder="Programme Search" /> <input type="submit" value="Search"/>
                 </form>        
             </div>
 
             <div class="advancedsearch">
                 <h3>Advanced Search</h3>
-                <p>Search for events by date, start time, type and/or focus group.</p>
+                <p>The rich offering of events at the assembly is intended  to maximize sharing among participants - to deepen
+                    their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide
+                    space for dialogue on important issues</p>
                 <form method="GET"
                     tal:attributes="action string:${context/absolute_url}/programmesearch">
                     <table style="width:100%">
                         <tr>
                             <td style="width:50%">
-                                <div class="search-field">
+                                <div>
+                                    <label for="search">Search Keyword</label>
+                                    <input type="text" name="search"/>
+                                </div><br />
+                                <div>
                                     <label for="focus_group">Focus group</label>
-                                    <select name="focus_group">
-                                        <option value="all">ALL</option>
-                                        <option tal:repeat="term view/focus_groups"
-                                            tal:attributes="value term/value"
-                                            tal:content="term/title">
-                                        </option>
-                                    </select>
-                                </div>
-                            <div class="search-field">
-                                <label for="event_type">Type of event</label>
-                                <select name="event_type">
-                                    <option value="all">ALL</option>
-                                </select>
-                            </div>
-                            <div class="search-field">
-                                <label for="start_time">Start From</label>
-                                <select name="start_time">
-                                    <option value="all">--:--</option>
-                                    <option tal:repeat="term view/times"
-                                        tal:attributes="value term/value"
-                                        tal:content="term/title">
-                                    </option>
-                                </select>
-                            </div>
-                            </td>
-                            <td>
-                                <label for="dates">Day</label>
-                                <tal:r repeat="day view/dates">
-                                    <div style="date-checkbox">
-                                    <input 
-                                        name="dates:list"
-                                        type="checkbox"
-                                        tal:attributes="value day/value"/>
-                                    <span tal:content="day/title"></span>
+                                    <div class="styled-select">
+                                        <select name="focus_group">
+                                            <option value="all">ALL</option>
+                                            <option tal:repeat="term view/focus_groups"
+                                                tal:attributes="value term/value"
+                                                tal:content="term/title">
+                                            </option>
+                                        </select
                                     </div>
-                                </tal:r>
+                                </div><br />
+                                <div>
+                                    <label for="event_type">Type of event</label>
+                                    <select name="event_type">
+                                        <option value="all">ALL</option>
+                                    </select>
+                                </div><br />
+                            </td>
+                            <td style="vertical-align: top">
+                                <div>
+                                    <label for="dates">Day</label>
+                                    <tal:r repeat="day view/dates">
+                                        <div class="date-checkbox">
+                                        <input 
+                                            name="dates:list"
+                                            type="checkbox"
+                                            tal:attributes="value day/value"/>
+                                        <span tal:content="day/title"></span>
+                                        </div>
+                                    </tal:r>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2">
+                            <td></td>
+                            <td style="text-align: right">
                                <input type="submit" value="Search"/> 
                             </td>
                         </tr>
