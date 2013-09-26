@@ -34,10 +34,6 @@
                         <tr>
                             <td style="width:50%">
                                 <div>
-                                    <label for="search">Search Keyword</label>
-                                    <input type="text" name="search"/>
-                                </div><br />
-                                <div>
                                     <label for="focus_group">Focus group</label>
                                     <div class="styled-select">
                                         <select name="focus_group">
@@ -46,13 +42,27 @@
                                                 tal:attributes="value term/value"
                                                 tal:content="term/title">
                                             </option>
-                                        </select
+                                        </select>
                                     </div>
                                 </div><br />
                                 <div>
                                     <label for="event_type">Type of event</label>
                                     <select name="event_type">
                                         <option value="all">ALL</option>
+                                        <option tal:repeat="term view/event_types"
+                                            tal:attributes="value term/value"
+                                            tal:content="term/title">
+                                        </option>
+                                    </select>
+                                </div><br />
+                                <div>
+                                    <label for="start_time">Start from</label>
+                                    <select name="start_time">
+                                        <option value="all">ALL</option>
+                                        <option tal:repeat="term view/times"
+                                            tal:attributes="value term/value"
+                                            tal:content="term/title">
+                                        </option>
                                     </select>
                                 </div><br />
                             </td>

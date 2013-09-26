@@ -17,17 +17,34 @@
       
       <div class="p-top-info-container">
             <div class="p-date-container">
-                  <img src="" alt="50px50px icon" />
+                <img tal:attributes="src view/icon_url" alt="50px50px icon"/>
                   <div class="p-date">
-                        <span class="p-day">Wednesday</span>
-                        <span class="p-date">30 Oct 2013</span>
-                        <span class="p-hours">8:00am - 9:00</span>
+                      <span class="p-day"
+                          tal:content="view/day">Wednesday</span>
+                      <span class="p-date"
+                          tal:content="view/date">30 Oct 2013</span>
+                      <span class="p-hours"
+                          tal:content="view/time">8:00am - 9:00</span>
                   </div>
             </div>
             <div class="p-description">
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+                <p tal:content="context/Description"></p>
             </div>
-      </div>
+        </div>
+
+        <div id="wcc-featurable-imageviewlet"
+            class="newsImageContainer"
+            style="width:400px">
+
+            <a>
+                <img tal:replace="structure python:view.get_feature_image('preview')"/>
+            </a>
+
+            <p tal:condition="context/imageCaption|nothing"
+                style="width:auto"
+                class="discreet" tal:content="context/imageCaption|nothing"></p>
+        </div>
+
       
       <div tal:content="structure context/text"/>
 

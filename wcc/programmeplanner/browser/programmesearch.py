@@ -5,6 +5,8 @@ from DateTime import DateTime
 import time
 import dateutil.tz
 import datetime
+from zope.component.hooks import getSite
+
 grok.templatedir('templates')
 
 def get_timezone():
@@ -12,6 +14,14 @@ def get_timezone():
     localoffset = localtz.utcoffset(datetime.datetime.now())
     return (localoffset.days * 86400 + localoffset.seconds) / 3600
 
+def time_more_than(a, b):
+    z, x = a.split(':')
+    n, m = b.split(':')
+    if int(z) > int(n):
+        return True
+    if int(z) == int(n) and int(x) >= int(m):
+        return True
+    return False
 
 class ProgrammeSearch(grok.View):
     grok.context(IContentish)
@@ -62,7 +72,8 @@ class ProgrammeSearch(grok.View):
 
         start_time = self.request.get('start_time', '').strip()
         if start_time and start_time != 'all':
-            results = [i for i in results if i.getObject().startTime==start_time]
+            results = [i for i in results if time_more_than(
+                i.getObject().startTime, start_time)]
 
         return list(sorted(results, key=lambda x:x.start))
 
@@ -78,8 +89,18 @@ class ProgrammeSearch(grok.View):
                 ),
                 'event_type': getattr(o, 'event_type', ''),
                 'title': o.Title(),
-                'description': o.Description()
+                'description': o.Description(),
+                'url': o.absolute_url()
             }
             results.append(item)
 
         return results
+
+
+    def event_type_icon(self, event_type):
+        site = getSite()
+        return '%s/++resource++wcc.programmeplanner/images/%s-icon.png' % (
+            site.absolute_url(), 
+            event_type
+        )
+

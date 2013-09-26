@@ -6,6 +6,15 @@ import time
 # -*- extra stuff goes here -*- 
 
 
+@gs.upgradestep(title=u'Upgrade wcc.programmeplanner to 3',
+                description=u'Upgrade wcc.programmeplanner to 3',
+                source='2', destination='3',
+                sortkey=1, profile='wcc.programmeplanner:default')
+def to3(context):
+    setup = getToolByName(context, 'portal_setup')
+    setup.runAllImportStepsFromProfile('profile-wcc.programmeplanner.upgrades:to3')
+
+
 @gs.upgradestep(title=u'Upgrade wcc.programmeplanner to 2',
                 description=u'Upgrade wcc.programmeplanner to 2',
                 source='1', destination='2',

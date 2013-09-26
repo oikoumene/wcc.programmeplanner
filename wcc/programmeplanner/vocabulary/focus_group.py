@@ -4,6 +4,7 @@ from zope.schema.vocabulary import SimpleVocabulary, SimpleTerm
 from zope.schema.interfaces import IVocabularyFactory
 from zope.component import getUtility
 from z3c.formwidget.query.interfaces import IQuerySource
+from wcc.programmeplanner import MessageFactory as _
 
 class FocusGroup(grok.GlobalUtility):
     grok.name('wcc.programmeplanner.focus_group')
@@ -11,16 +12,16 @@ class FocusGroup(grok.GlobalUtility):
 
     _terms = [{
         'value': 'inter-religious',
-        'title': 'Inter Religious',
+        'title': _('Inter-religious'),
     },{
         'value': 'gender',
-        'title': 'Gender',
+        'title': _('Gender'),
     },{
         'value': 'indigenous-people',
-        'title': 'Indigenous People',
+        'title': _('Indigenous People'),
     },{
         'value': 'youth',
-        'title': 'Youth',
+        'title': _('Youth'),
     }]
 
     def __call__(self, context):

@@ -31,9 +31,16 @@
             <tr tal:repeat="item view/results">
                 <td tal:content="item/day"></td>
                 <td tal:content="item/schedule"></td>
-                <td tal:content="item/event_type" tal:attributes="class item/event_type"></td>
                 <td>
-                    <h4 tal:content="item/title"></h4>
+                    <img style="width:30px" 
+                        tal:attributes="src python:view.event_type_icon(item['event_type'])"/>
+                </td>
+                <td>
+                    <h4>
+                        <a tal:attributes="href item/url"
+                            tal:content="item/title">
+                        </a>
+                    </h4>
                     <p class="event-desc" tal:content="item/description"></p>
                 </td>
             </tr>

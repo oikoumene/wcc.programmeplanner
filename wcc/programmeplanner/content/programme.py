@@ -21,11 +21,12 @@ from plone.multilingualbehavior.directives import languageindependent
 
 from wcc.programmeplanner import MessageFactory as _
 from collective import dexteritytextindexer
-
+from wcc.featurable.interfaces import IFeatureImageViewletDisabled
 
 # Interface class; used to define content-type schema.
 
-class IProgramme(form.Schema, IImageScaleTraversable):
+class IProgramme(form.Schema, IImageScaleTraversable,
+        IFeatureImageViewletDisabled):
     """
     
     """

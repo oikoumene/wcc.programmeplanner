@@ -10,6 +10,14 @@ class ProgrammeTimes(grok.GlobalUtility):
     grok.implements(IVocabularyFactory)
 
     def __call__(self, context):
-        items = ['%02d:00' % i for i in range(6,23)]
+        items = [
+            '8:30',
+            '9:15',
+            '10:45',
+            '14:15',
+            '16:15',
+            '18:15',
+            '20:00'
+        ]
         terms = [SimpleTerm(i, i, i) for i in items]
         return SimpleVocabulary(terms)
