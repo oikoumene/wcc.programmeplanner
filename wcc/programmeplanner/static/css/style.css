@@ -25,6 +25,7 @@
     float: left;
     margin-right: 10px;
     overflow: hidden;
+    background-color: #ccc;
 }
 .p-date-container span{
     display: block;
@@ -35,3 +36,5 @@
     padding-left: 3%;
     border-left: 2px solid #555;
 }
+
+
