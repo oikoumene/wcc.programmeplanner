@@ -1,4 +1,4 @@
-<dl class="portlet portletProgrammeFocusPortlet"
+<dl class="portlet portletProgrammeFocusPortlet col-portlet"
     i18n:domain="wcc.programmeplanner">
 
     <dt class="portletHeader">
@@ -7,10 +7,35 @@
         <span class="portletTopRight"></span>
     </dt>
 
-    <dd class="portletItem">
-        <div tal:repeat="item view/items">
-            <b tal:content="item/Title"></b>
+    <dd class="portletItem portlet-col-item">
+        <div class="col-item col-three-item" tal:repeat="item view/items">
+            <img alt="50px50px icon" src="" />
+            <div class="event-info">
+                <h4 tal:content="item/Title"></h4>
+                <p class="e-desc" tal:content="item/Description"></p>
+                <p>
+                    <span>Wednesday</span>
+                    <span>30 Oct. 2013</span>
+                    <span>8:00 AM - 9:00 AM</span>
+                    <span>Venue</span>
+                </p>
+            </div>
         </div>
+        
+        <!--<div class="col-item col-three-item">-->
+        <!--    <img alt="50px50px icon" src="" />-->
+        <!--    <div class="event-info">-->
+        <!--        <h4>Title of the Event</h4>-->
+        <!--        <p class="e-desc">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>-->
+        <!--        <p>-->
+        <!--            <span>Wednesday</span>-->
+        <!--            <span>30 Oct. 2013</span>-->
+        <!--            <span>8:00 AM - 9:00 AM</span>-->
+        <!--            <span>Venue</span>-->
+        <!--        </p>-->
+        <!--    </div>-->
+        <!--</div>-->
+        
     </dd>
 
     <dd class="portletFooter">
