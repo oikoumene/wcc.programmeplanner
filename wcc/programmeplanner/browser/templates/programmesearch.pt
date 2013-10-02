@@ -21,10 +21,10 @@
                 <col style="width: 35%">
             </colgroup>
             <thead>
-                <tr><th>Day</th>
-                    <th>Schedule</th>
-                    <th>Event Type</th>
-                    <th>Event Details</th>
+                <tr><th i18n:translate="day">Day</th>
+                    <th i18n:translate="schedule">Schedule</th>
+                    <th i18n:translate="event-type">Event Type</th>
+                    <th i18n:translate="event-details">Event Details</th>
                 </tr>
             </thead>
             <tbody>

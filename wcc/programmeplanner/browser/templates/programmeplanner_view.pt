@@ -12,20 +12,23 @@
         <div metal:define-macro="content-core">
 
             <div class="quicksearch">
-                <h3>Quick Search</h3>
-                <p>The rich offering of events at the assembly is intended  to maximize sharing among participants - to deepen
+                <h3 i18n:translate="quick-search">Quick Search</h3>
+                <p i18n:translate="quick-search-description">
+                    The rich offering of events at the assembly is intended  to maximize sharing among participants - to deepen
                     their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide
                     space for dialogue on important issues</p>
 
                 <form method="GET" 
                     tal:attributes="action string:${context/absolute_url}/programmesearch">
-                    <input type="text" name="search" placeholder="Programme Search" /> <input type="submit" value="Search"/>
+                    <input type="text" name="search" i18n:attributes="placeholder programme-search"
+                        placeholder="Programme Search" /> <input type="submit" value="Search"/>
                 </form>        
             </div>
 
             <div class="advancedsearch">
-                <h3>Advanced Search</h3>
-                <p>The rich offering of events at the assembly is intended  to maximize sharing among participants - to deepen
+                <h3 i18n:translate="advanced-search">Advanced Search</h3>
+                <p i18n:translate="advanced-search-description">
+                    The rich offering of events at the assembly is intended  to maximize sharing among participants - to deepen
                     their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide
                     space for dialogue on important issues</p>
                 <form method="GET"
@@ -34,7 +37,8 @@
                         <tr>
                             <td style="width:50%">
                                 <div>
-                                    <label for="focus_group">Focus group</label>
+                                    <label i18n:translate="focus-group"
+                                        for="focus_group">Focus group</label>
                                     <div class="styled-select">
                                         <select name="focus_group">
                                             <option value="all">ALL</option>
@@ -46,7 +50,8 @@
                                     </div>
                                 </div><br />
                                 <div>
-                                    <label for="event_type">Type of event</label>
+                                    <label i8n:translate="type-of-event"
+                                        for="event_type">Type of event</label>
                                     <select name="event_type">
                                         <option value="all">ALL</option>
                                         <option tal:repeat="term view/event_types"
@@ -56,7 +61,8 @@
                                     </select>
                                 </div><br />
                                 <div>
-                                    <label for="start_time">Start from</label>
+                                    <label i18n:translate="start-from"
+                                        for="start_time">Start from</label>
                                     <select name="start_time">
                                         <option value="all">ALL</option>
                                         <option tal:repeat="term view/times"
@@ -68,7 +74,8 @@
                             </td>
                             <td style="vertical-align: top">
                                 <div>
-                                    <label for="dates">Day</label>
+                                    <label i18n:translate="day"
+                                        for="dates">Day</label>
                                     <tal:r repeat="day view/dates">
                                         <div class="date-checkbox">
                                         <input 
@@ -84,7 +91,8 @@
                         <tr>
                             <td></td>
                             <td style="text-align: right">
-                               <input type="submit" value="Search"/> 
+                                <input type="submit" i18n:attributes="value search"
+                                    value="Search"/> 
                             </td>
                         </tr>
                     </table>

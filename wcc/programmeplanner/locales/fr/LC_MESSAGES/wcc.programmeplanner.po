@@ -1,0 +1,217 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./portlet/programmefocusportlet.py:120
+msgid "Add Programme Focus Portlet"
+msgstr ""
+
+#: ./portlet/programmehighlight.py:117
+msgid "Add Programme Highlight"
+msgstr ""
+
+#: ./portlet/upcomingprogrammes.py:90
+msgid "Add Upcoming Programmes"
+msgstr ""
+
+#: ./vocabulary/event_type.py:21
+msgid "Bible Study"
+msgstr ""
+
+#: ./content/programme.py:64
+msgid "Body Text"
+msgstr ""
+
+#: ./content/programme.py:35
+msgid "Date"
+msgstr ""
+
+#: ./vocabulary/event_type.py:24
+msgid "Ecumenical Conversation"
+msgstr ""
+
+#: ./portlet/programmefocusportlet.py:130
+msgid "Edit Programme Focus Portlet"
+msgstr ""
+
+#: ./portlet/programmehighlight.py:127
+msgid "Edit Programme Highlight"
+msgstr ""
+
+#: ./portlet/upcomingprogrammes.py:100
+msgid "Edit Upcoming Programmes"
+msgstr ""
+
+#: ./content/programmeplanner.py:39
+msgid "End Date"
+msgstr ""
+
+#: ./content/programme.py:43
+msgid "End Time"
+msgstr ""
+
+#: ./content/programme.py:49
+msgid "Event Type"
+msgstr ""
+
+#: ./portlet/programmefocusportlet.py:34
+#: ./portlet/programmehighlight.py:35
+#: ./portlet/upcomingprogrammes.py:32
+msgid "Find the programmeplanner which provides the items to list"
+msgstr ""
+
+#: ./content/programme.py:55
+msgid "Focus Group"
+msgstr ""
+
+#: ./portlet/programmefocusportlet.py:41
+msgid "Focus group"
+msgstr ""
+
+#: ./vocabulary/focus_group.py:18
+msgid "Gender"
+msgstr ""
+
+#: ./vocabulary/focus_group.py:21
+msgid "Indigenous People"
+msgstr ""
+
+#: ./vocabulary/focus_group.py:15
+msgid "Inter-religious"
+msgstr ""
+
+#: ./vocabulary/event_type.py:18
+msgid "Madang performance"
+msgstr ""
+
+#: ./vocabulary/event_type.py:15
+msgid "Madang workshop"
+msgstr ""
+
+#: ./vocabulary/event_type.py:33
+msgid "Other"
+msgstr ""
+
+#: ./vocabulary/event_type.py:30
+msgid "Plenary"
+msgstr ""
+
+#: ./vocabulary/event_type.py:27
+msgid "Prayer"
+msgstr ""
+
+#: ./profiles/default/types/wcc.programmeplanner.programme.xml
+msgid "Programme"
+msgstr ""
+
+#: ./portlet/programmefocusportlet.py:56
+msgid "Programme Focus : %s"
+msgstr ""
+
+#: ./portlet/programmehighlight.py:50
+msgid "Programme Highlight"
+msgstr ""
+
+#: ./profiles/default/types/wcc.programmeplanner.programmeplanner.xml
+msgid "ProgrammePlanner"
+msgstr ""
+
+#: ./content/programmeplanner.py:33
+msgid "Start Date"
+msgstr ""
+
+#: ./content/programme.py:38
+msgid "Start Time"
+msgstr ""
+
+#: ./portlet/programmefocusportlet.py:33
+#: ./portlet/programmehighlight.py:34
+#: ./portlet/upcomingprogrammes.py:31
+msgid "Target programmeplanner"
+msgstr ""
+
+#: ./portlet/upcomingprogrammes.py:28
+msgid "Title"
+msgstr ""
+
+#: ./vocabulary/focus_group.py:24
+msgid "Youth"
+msgstr ""
+
+#. Default: "Advanced Search"
+#: ./browser/templates/programmeplanner_view.pt:29
+msgid "advanced-search"
+msgstr "Recherche avancée"
+
+#. Default: "The rich offering of events at the assembly is intended to maximize sharing among participants - to deepen their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide space for dialogue on important issues"
+#: ./browser/templates/programmeplanner_view.pt:30
+msgid "advanced-search-description"
+msgstr ""
+
+#. Default: "Day"
+#: ./browser/templates/programmeplanner_view.pt:77
+#: ./browser/templates/programmesearch.pt:24
+msgid "day"
+msgstr "Jour"
+
+#. Default: "Event Details"
+#: ./browser/templates/programmesearch.pt:27
+msgid "event-details"
+msgstr ""
+
+#. Default: "Event Type"
+#: ./browser/templates/programmesearch.pt:26
+msgid "event-type"
+msgstr ""
+
+#. Default: "Focus group"
+#: ./browser/templates/programmeplanner_view.pt:40
+msgid "focus-group"
+msgstr "Groupe de discussion"
+
+#. Default: "Programme Search"
+#: ./browser/templates/programmeplanner_view.pt:23
+msgid "programme-search"
+msgstr ""
+
+#. Default: "Quick Search"
+#: ./browser/templates/programmeplanner_view.pt:15
+msgid "quick-search"
+msgstr "Recherche rapide"
+
+#. Default: "The rich offering of events at the assembly is intended to maximize sharing among participants - to deepen their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide space for dialogue on important issues"
+#: ./browser/templates/programmeplanner_view.pt:16
+msgid "quick-search-description"
+msgstr "Recherche de mot(s) dans les titres et descriptions des événements."
+
+#. Default: "Schedule"
+#: ./browser/templates/programmesearch.pt:25
+msgid "schedule"
+msgstr ""
+
+#. Default: "Search"
+#: ./browser/templates/programmeplanner_view.pt:94
+msgid "search"
+msgstr "Chercher"
+
+#. Default: "Start from"
+#: ./browser/templates/programmeplanner_view.pt:64
+msgid "start-from"
+msgstr "Début:"
+
+#: ./setuphandlers.py:6
+msgid "wcc.programmeplanner import handler"
+msgstr ""
+
