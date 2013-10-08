@@ -27,6 +27,6 @@ class Index(dexterity.DisplayForm):
 
     def times(self):
         factory = getUtility(IVocabularyFactory,
-                name='wcc.programmeplanner.programme_times')
+                name='wcc.programmeplanner.programme_times_search')
         return factory(self.context)
            
