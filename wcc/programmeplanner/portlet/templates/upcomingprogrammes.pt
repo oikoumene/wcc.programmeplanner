@@ -1,21 +1,24 @@
-<dl class="portlet portletUpcomingProgrammes"
+<div class="portletUpcomingProgrammes"
     i18n:domain="wcc.programmeplanner">
 
-    <dt class="portletHeader">
-        <span class="portletTopLeft"></span>
-        <span tal:content="view/data/title"/>
-        <span class="portletTopRight"></span>
-    </dt>
+    <h2 tal:content="view/data/title"></h2>
 
-    <dd class="portletItem">
-        <div tal:repeat="item view/upcoming">
-            <h1 tal:content="item/Title"></h1>
+    <div tal:repeat="item view/upcoming" class="upcoming-item">
+        <h5 tal:content="item/Title"></h5>
+        <div>
+            <div style="float:left">
+                <img
+                    style="width:25px" 
+                    tal:attributes="src python:view.event_type_icon(item.event_type)"/>
+            </div>
+            <div style="float:left">
+                <span tal:content="python:view.item_date(item)"/><br/>
+                <span tal:content="string:${item/startTime} - ${item/endTime}"/><br/>
+                <span tal:content="item/Description"/>
+            </div>
+            <div class="visualClear"></div>
         </div>
-    </dd>
+    </div>
 
-    <dd class="portletFooter">
-        <span class="portletBottomLeft"></span>
-        <span class="portletBottomRight"></span>
-    </dd>
 
-</dl>
+</div>

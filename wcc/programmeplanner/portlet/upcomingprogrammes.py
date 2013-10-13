@@ -19,6 +19,7 @@ from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from Acquisition import aq_inner
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from wcc.programmeplanner import MessageFactory as _
+from zope.component.hooks import getSite
 
 class IUpcomingProgrammes(IPortletDataProvider):
     """
@@ -83,6 +84,18 @@ class Renderer(base.Renderer):
 
         return [b.getObject() for b in brains[:5]]
 
+    def event_type_icon(self, event_type):
+        site = getSite()
+        return '%s/++resource++wcc.programmeplanner/images/%s-icon.png' % (
+            site.absolute_url(),
+            event_type
+        )
+
+
+    def item_date(self, item):
+        return item.date.strftime('%A, %e %B')
+
+
 class AddForm(base.AddForm):
     form_fields = form.Fields(IUpcomingProgrammes)
     form_fields['target_programmeplanner'].custom_widget = UberSelectionWidget
@@ -93,7 +106,7 @@ class AddForm(base.AddForm):
     def create(self, data):
         return Assignment(**data)
 
-class EditForm(form.EditForm):
+class EditForm(base.EditForm):
     form_fields = form.Fields(IUpcomingProgrammes)
     form_fields['target_programmeplanner'].custom_widget = UberSelectionWidget
 
