@@ -15,35 +15,37 @@
 <metal:main fill-slot="content-core">
   <metal:content-core define-macro="content-core">
       
-      <div class="p-top-info-container">
-            <div class="p-date-container">
-                <img tal:attributes="src view/icon_url" alt="50px50px icon"/>
-                  <div class="p-date">
-                      <span class="p-day"
-                          tal:content="view/day">Wednesday</span>
-                      <span class="p-date"
-                          tal:content="view/date">30 Oct 2013</span>
-                      <span class="p-hours"
-                          tal:content="view/time">8:00am - 9:00</span>
-                  </div>
-            </div>
-            <div class="p-description">
-                <p tal:content="context/Description"></p>
-            </div>
-        </div>
+      <table class="p-top-info-container">
+          <tr>
+          <td class="p-date-container">
+              <img tal:attributes="src view/icon_url" alt="50px50px icon"/>
+              <div class="p-date">
+                  <span class="p-day"
+                      tal:content="view/day">Wednesday</span>
+                  <span class="p-date"
+                      tal:content="view/date">30 Oct 2013</span>
+                  <span class="p-hours"
+                      tal:content="view/time">8:00am - 9:00</span>
+              </div>
+          </td>
+          <td class="p-description">
+              <p tal:content="context/Description"></p>
+          </td>
+          </tr>
+      </table>
 
-        <div id="wcc-featurable-imageviewlet"
-            class="newsImageContainer"
-            style="width:400px">
+      <div id="wcc-featurable-imageviewlet"
+          class="newsImageContainer"
+          style="width:400px">
 
-            <a>
-                <img tal:replace="structure python:view.get_feature_image('preview')"/>
-            </a>
+          <a>
+              <img tal:replace="structure python:view.get_feature_image('preview')"/>
+          </a>
 
-            <p tal:condition="context/imageCaption|nothing"
-                style="width:auto"
-                class="discreet" tal:content="context/imageCaption|nothing"></p>
-        </div>
+          <p tal:condition="context/imageCaption|nothing"
+              style="width:auto"
+              class="discreet" tal:content="context/imageCaption|nothing"></p>
+      </div>
 
       
       <div tal:content="structure context/text"/>

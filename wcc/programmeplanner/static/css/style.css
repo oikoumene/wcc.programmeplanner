@@ -13,11 +13,12 @@
 /*style for programme_view template*/
 .p-top-info-container{
     margin: 20px 0;
+    width:90%;
 }
 .p-top-info-container:after{content: " ";display: block;clear: both}
 .p-date-container{
-    width: 22%;
-    float: left;
+    width: 26%;
+    vertical-align:top;
 }
 .p-date-container img{
     height: 50px;
@@ -31,10 +32,9 @@
     display: block;
 }
 .p-description{
-    float: right;
-    width: 73%;
     padding-left: 3%;
     border-left: 2px solid #555;
+    vertical-align:top;
 }
 
 

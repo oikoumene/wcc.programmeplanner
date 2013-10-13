@@ -34,6 +34,7 @@ setup(name='wcc.programmeplanner',
           'plone.app.multilingual',
           'plone.multilingualbehavior',
           'plone.app.versioningbehavior',
+          'plone.api'
           # -*- Extra requirements: -*-
       ],
       extras_require={

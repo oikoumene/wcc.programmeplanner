@@ -12,7 +12,7 @@ class ProgrammeTimes(grok.GlobalUtility):
     def __call__(self, context):
         items = []
         for i in range(0,24):
-            for x in (0,30):
+            for x in range(0,60,5):
                 items.append('%d:02%d' % (i, x))
         terms = [SimpleTerm(i, i, i) for i in items]
         return SimpleVocabulary(terms)

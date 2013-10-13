@@ -22,6 +22,9 @@ class FocusGroup(grok.GlobalUtility):
     },{
         'value': 'youth',
         'title': _('Youth'),
+    },{
+        'value': 'edan',
+        'title': _('EDAN'),
     }]
 
     def __call__(self, context):

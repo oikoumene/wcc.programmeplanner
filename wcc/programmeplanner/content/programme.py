@@ -30,6 +30,9 @@ class IProgramme(form.Schema, IImageScaleTraversable,
     """
     
     """
+
+    languageindependent('code')
+    code = schema.TextLine(title=_(u'Code'))
     
     languageindependent('date')
     date = schema.Date(title=_(u'Date'))
