@@ -34,7 +34,7 @@ class ProgrammeDates(grok.GlobalUtility):
         for date in dates:
             terms.append(SimpleTerm(
                 value=date.strftime('%Y-%m-%d'), 
-                title=date.strftime('%d %B')
+                title=date.strftime('%a, %e %b')
             ))
         return SimpleVocabulary(terms)
 
