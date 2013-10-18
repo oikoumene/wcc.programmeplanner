@@ -14,9 +14,8 @@
             <div class="quicksearch">
                 <h3 i18n:translate="quick-search">Quick Search</h3>
                 <p i18n:translate="quick-search-description">
-                    The rich offering of events at the assembly is intended  to maximize sharing among participants - to deepen
-                    their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide
-                    space for dialogue on important issues</p>
+                    Search for  word(s) in the events titles and descriptions.
+                </p>
 
                 <form method="GET" 
                     tal:attributes="action string:${context/absolute_url}/programmesearch">
@@ -28,9 +27,8 @@
             <div class="advancedsearch">
                 <h3 i18n:translate="advanced-search">Advanced Search</h3>
                 <p i18n:translate="advanced-search-description">
-                    The rich offering of events at the assembly is intended  to maximize sharing among participants - to deepen
-                    their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide
-                    space for dialogue on important issues</p>
+                     Search for events by date, start time, type and/or focus group.
+                </p>
                 <form method="GET"
                     tal:attributes="action string:${context/absolute_url}/programmesearch">
                     <table style="width:100%">

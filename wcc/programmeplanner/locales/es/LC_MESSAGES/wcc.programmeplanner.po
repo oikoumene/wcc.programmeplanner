@@ -22,25 +22,33 @@ msgstr ""
 msgid "Add Programme Highlight"
 msgstr ""
 
-#: ./portlet/upcomingprogrammes.py:90
+#: ./portlet/upcomingprogrammes.py:103
 msgid "Add Upcoming Programmes"
 msgstr ""
 
 #: ./vocabulary/event_type.py:21
 msgid "Bible Study"
-msgstr ""
+msgstr "Estudio bíblico"
 
-#: ./content/programme.py:64
+#: ./content/programme.py:67
 msgid "Body Text"
 msgstr ""
 
 #: ./content/programme.py:35
+msgid "Code"
+msgstr ""
+
+#: ./content/programme.py:38
 msgid "Date"
+msgstr ""
+
+#: ./vocabulary/focus_group.py:27
+msgid "EDAN"
 msgstr ""
 
 #: ./vocabulary/event_type.py:24
 msgid "Ecumenical Conversation"
-msgstr ""
+msgstr "Conversación ecuménica"
 
 #: ./portlet/programmefocusportlet.py:130
 msgid "Edit Programme Focus Portlet"
@@ -50,7 +58,7 @@ msgstr ""
 msgid "Edit Programme Highlight"
 msgstr ""
 
-#: ./portlet/upcomingprogrammes.py:100
+#: ./portlet/upcomingprogrammes.py:113
 msgid "Edit Upcoming Programmes"
 msgstr ""
 
@@ -58,59 +66,67 @@ msgstr ""
 msgid "End Date"
 msgstr ""
 
-#: ./content/programme.py:43
+#: ./content/programme.py:46
 msgid "End Time"
 msgstr ""
 
-#: ./content/programme.py:49
+#: ./content/programme.py:52
 msgid "Event Type"
 msgstr ""
 
 #: ./portlet/programmefocusportlet.py:34
 #: ./portlet/programmehighlight.py:35
-#: ./portlet/upcomingprogrammes.py:32
+#: ./portlet/upcomingprogrammes.py:33
 msgid "Find the programmeplanner which provides the items to list"
 msgstr ""
 
-#: ./content/programme.py:55
+#: ./content/programme.py:58
 msgid "Focus Group"
-msgstr ""
+msgstr "Grupo de discusión"
 
 #: ./portlet/programmefocusportlet.py:41
 msgid "Focus group"
-msgstr ""
+msgstr "Grupo de discusión"
 
 #: ./vocabulary/focus_group.py:18
 msgid "Gender"
+msgstr "Género"
+
+#: ./browser/programme_import.py:47
+msgid "Import"
+msgstr ""
+
+#: ./browser/programme_import.py:38
+msgid "Import Programmes from CSV"
 msgstr ""
 
 #: ./vocabulary/focus_group.py:21
 msgid "Indigenous People"
-msgstr ""
+msgstr "Pueblos indígenas"
 
 #: ./vocabulary/focus_group.py:15
 msgid "Inter-religious"
-msgstr ""
+msgstr "Interreligioso"
 
 #: ./vocabulary/event_type.py:18
 msgid "Madang performance"
-msgstr ""
+msgstr "Evento del Madang"
 
 #: ./vocabulary/event_type.py:15
 msgid "Madang workshop"
-msgstr ""
+msgstr "Taller del Madang"
 
 #: ./vocabulary/event_type.py:33
 msgid "Other"
-msgstr ""
+msgstr "Otros"
 
 #: ./vocabulary/event_type.py:30
 msgid "Plenary"
-msgstr ""
+msgstr "Plenario"
 
 #: ./vocabulary/event_type.py:27
 msgid "Prayer"
-msgstr ""
+msgstr "Oración"
 
 #: ./profiles/default/types/wcc.programmeplanner.programme.xml
 msgid "Programme"
@@ -132,36 +148,41 @@ msgstr ""
 msgid "Start Date"
 msgstr ""
 
-#: ./content/programme.py:38
+#: ./content/programme.py:41
 msgid "Start Time"
 msgstr ""
 
 #: ./portlet/programmefocusportlet.py:33
 #: ./portlet/programmehighlight.py:34
-#: ./portlet/upcomingprogrammes.py:31
+#: ./portlet/upcomingprogrammes.py:32
 msgid "Target programmeplanner"
 msgstr ""
 
-#: ./portlet/upcomingprogrammes.py:28
+#: ./portlet/upcomingprogrammes.py:29
 msgid "Title"
+msgstr ""
+
+#: ./browser/programme_import.py:33
+msgid "Upload CSV"
 msgstr ""
 
 #: ./vocabulary/focus_group.py:24
 msgid "Youth"
-msgstr ""
+msgstr "Jóvenes"
 
 #. Default: "Advanced Search"
-#: ./browser/templates/programmeplanner_view.pt:29
+#: ./browser/templates/programmeplanner_view.pt:28
 msgid "advanced-search"
 msgstr "Búsqueda avanzada"
 
-#. Default: "The rich offering of events at the assembly is intended to maximize sharing among participants - to deepen their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide space for dialogue on important issues"
-#: ./browser/templates/programmeplanner_view.pt:30
+#. Default: "Search for events by date, start time, type and/or focus group."
+#: ./browser/templates/programmeplanner_view.pt:29
+#, fuzzy
 msgid "advanced-search-description"
 msgstr "Búsqueda de eventos por fecha, hora de comienzo, tipo o grupo de discusión."
 
 #. Default: "Day"
-#: ./browser/templates/programmeplanner_view.pt:77
+#: ./browser/templates/programmeplanner_view.pt:75
 #: ./browser/templates/programmesearch.pt:24
 msgid "day"
 msgstr "Día"
@@ -177,12 +198,12 @@ msgid "event-type"
 msgstr ""
 
 #. Default: "Focus group"
-#: ./browser/templates/programmeplanner_view.pt:40
+#: ./browser/templates/programmeplanner_view.pt:38
 msgid "focus-group"
 msgstr "Grupo de discusión"
 
 #. Default: "Programme Search"
-#: ./browser/templates/programmeplanner_view.pt:23
+#: ./browser/templates/programmeplanner_view.pt:22
 msgid "programme-search"
 msgstr ""
 
@@ -191,8 +212,9 @@ msgstr ""
 msgid "quick-search"
 msgstr "Búsqueda rápida"
 
-#. Default: "The rich offering of events at the assembly is intended to maximize sharing among participants - to deepen their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide space for dialogue on important issues"
+#. Default: "Search for word(s) in the events titles and descriptions."
 #: ./browser/templates/programmeplanner_view.pt:16
+#, fuzzy
 msgid "quick-search-description"
 msgstr "Búsqueda de palabra(s) en los títulos y las descripciones de los eventos."
 
@@ -202,12 +224,12 @@ msgid "schedule"
 msgstr ""
 
 #. Default: "Search"
-#: ./browser/templates/programmeplanner_view.pt:94
+#: ./browser/templates/programmeplanner_view.pt:92
 msgid "search"
 msgstr "Buscar"
 
 #. Default: "Start from"
-#: ./browser/templates/programmeplanner_view.pt:64
+#: ./browser/templates/programmeplanner_view.pt:62
 msgid "start-from"
 msgstr ""
 

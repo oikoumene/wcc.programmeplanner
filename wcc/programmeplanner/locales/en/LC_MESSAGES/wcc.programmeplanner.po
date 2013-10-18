@@ -22,7 +22,7 @@ msgstr ""
 msgid "Add Programme Highlight"
 msgstr ""
 
-#: ./portlet/upcomingprogrammes.py:90
+#: ./portlet/upcomingprogrammes.py:103
 msgid "Add Upcoming Programmes"
 msgstr ""
 
@@ -30,12 +30,20 @@ msgstr ""
 msgid "Bible Study"
 msgstr ""
 
-#: ./content/programme.py:64
+#: ./content/programme.py:67
 msgid "Body Text"
 msgstr ""
 
 #: ./content/programme.py:35
+msgid "Code"
+msgstr ""
+
+#: ./content/programme.py:38
 msgid "Date"
+msgstr ""
+
+#: ./vocabulary/focus_group.py:27
+msgid "EDAN"
 msgstr ""
 
 #: ./vocabulary/event_type.py:24
@@ -50,7 +58,7 @@ msgstr ""
 msgid "Edit Programme Highlight"
 msgstr ""
 
-#: ./portlet/upcomingprogrammes.py:100
+#: ./portlet/upcomingprogrammes.py:113
 msgid "Edit Upcoming Programmes"
 msgstr ""
 
@@ -58,21 +66,21 @@ msgstr ""
 msgid "End Date"
 msgstr ""
 
-#: ./content/programme.py:43
+#: ./content/programme.py:46
 msgid "End Time"
 msgstr ""
 
-#: ./content/programme.py:49
+#: ./content/programme.py:52
 msgid "Event Type"
 msgstr ""
 
 #: ./portlet/programmefocusportlet.py:34
 #: ./portlet/programmehighlight.py:35
-#: ./portlet/upcomingprogrammes.py:32
+#: ./portlet/upcomingprogrammes.py:33
 msgid "Find the programmeplanner which provides the items to list"
 msgstr ""
 
-#: ./content/programme.py:55
+#: ./content/programme.py:58
 msgid "Focus Group"
 msgstr ""
 
@@ -82,6 +90,14 @@ msgstr ""
 
 #: ./vocabulary/focus_group.py:18
 msgid "Gender"
+msgstr ""
+
+#: ./browser/programme_import.py:47
+msgid "Import"
+msgstr ""
+
+#: ./browser/programme_import.py:38
+msgid "Import Programmes from CSV"
 msgstr ""
 
 #: ./vocabulary/focus_group.py:21
@@ -132,18 +148,22 @@ msgstr ""
 msgid "Start Date"
 msgstr ""
 
-#: ./content/programme.py:38
+#: ./content/programme.py:41
 msgid "Start Time"
 msgstr ""
 
 #: ./portlet/programmefocusportlet.py:33
 #: ./portlet/programmehighlight.py:34
-#: ./portlet/upcomingprogrammes.py:31
+#: ./portlet/upcomingprogrammes.py:32
 msgid "Target programmeplanner"
 msgstr ""
 
-#: ./portlet/upcomingprogrammes.py:28
+#: ./portlet/upcomingprogrammes.py:29
 msgid "Title"
+msgstr ""
+
+#: ./browser/programme_import.py:33
+msgid "Upload CSV"
 msgstr ""
 
 #: ./vocabulary/focus_group.py:24
@@ -151,17 +171,17 @@ msgid "Youth"
 msgstr ""
 
 #. Default: "Advanced Search"
-#: ./browser/templates/programmeplanner_view.pt:29
+#: ./browser/templates/programmeplanner_view.pt:28
 msgid "advanced-search"
 msgstr ""
 
-#. Default: "The rich offering of events at the assembly is intended to maximize sharing among participants - to deepen their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide space for dialogue on important issues"
-#: ./browser/templates/programmeplanner_view.pt:30
+#. Default: "Search for events by date, start time, type and/or focus group."
+#: ./browser/templates/programmeplanner_view.pt:29
 msgid "advanced-search-description"
 msgstr ""
 
 #. Default: "Day"
-#: ./browser/templates/programmeplanner_view.pt:77
+#: ./browser/templates/programmeplanner_view.pt:75
 #: ./browser/templates/programmesearch.pt:24
 msgid "day"
 msgstr ""
@@ -177,12 +197,12 @@ msgid "event-type"
 msgstr ""
 
 #. Default: "Focus group"
-#: ./browser/templates/programmeplanner_view.pt:40
+#: ./browser/templates/programmeplanner_view.pt:38
 msgid "focus-group"
 msgstr ""
 
 #. Default: "Programme Search"
-#: ./browser/templates/programmeplanner_view.pt:23
+#: ./browser/templates/programmeplanner_view.pt:22
 msgid "programme-search"
 msgstr ""
 
@@ -191,7 +211,7 @@ msgstr ""
 msgid "quick-search"
 msgstr ""
 
-#. Default: "The rich offering of events at the assembly is intended to maximize sharing among participants - to deepen their experience of fellowship, to increase their knowledge of the ecumenical movement and to provide space for dialogue on important issues"
+#. Default: "Search for word(s) in the events titles and descriptions."
 #: ./browser/templates/programmeplanner_view.pt:16
 msgid "quick-search-description"
 msgstr ""
@@ -202,12 +222,12 @@ msgid "schedule"
 msgstr ""
 
 #. Default: "Search"
-#: ./browser/templates/programmeplanner_view.pt:94
+#: ./browser/templates/programmeplanner_view.pt:92
 msgid "search"
 msgstr ""
 
 #. Default: "Start from"
-#: ./browser/templates/programmeplanner_view.pt:64
+#: ./browser/templates/programmeplanner_view.pt:62
 msgid "start-from"
 msgstr ""
 
