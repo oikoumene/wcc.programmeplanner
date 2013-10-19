@@ -23,6 +23,7 @@ from plone.app.vocabularies.catalog import SearchableTextSourceBinder
 from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from zope.schema.interfaces import IVocabularyFactory
 from zope.component import getUtility
+from zope.component.hooks import getSite
 
 
 class IProgrammeFocusPortlet(IPortletDataProvider):
