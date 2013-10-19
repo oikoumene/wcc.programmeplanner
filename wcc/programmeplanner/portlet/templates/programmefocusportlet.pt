@@ -8,10 +8,13 @@
     </dt>
 
     <dd class="portletItem portlet-col-item">
-        <div class="col-item col-three-item" tal:repeat="item view/items">
-            <img width="50px"
+        <div class="col-item" tal:repeat="item view/items"
+                  style="height:300px;float:left;width:200px;padding:10px">
+            <img width="40px"
+                style="float:left;margin:3px"
                 tal:attributes="src python:view.event_type_icon(item.event_type)"/>
-            <div class="event-info">
+            <div class="event-info"
+                style="float:left;width:130px">
                 <h4 tal:content="item/Title"></h4>
                 <p class="e-desc" tal:content="item/Description"></p>
                 <p>
@@ -20,8 +23,8 @@
                     <span tal:content="python:view.item_time(item)">8:00 AM - 9:00 AM</span>
                 </p>
             </div>
+            <div class="visualClear"></div>
         </div>
-        
     </dd>
 
     <div class="visualClear"></div>
