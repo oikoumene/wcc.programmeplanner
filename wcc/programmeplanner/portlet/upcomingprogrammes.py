@@ -20,6 +20,7 @@ from Acquisition import aq_inner
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from wcc.programmeplanner import MessageFactory as _
 from zope.component.hooks import getSite
+from DateTime import DateTime
 
 class IUpcomingProgrammes(IPortletDataProvider):
     """
@@ -79,7 +80,11 @@ class Renderer(base.Renderer):
                 'depth': 5
             }, 
             'portal_type': 'wcc.programmeplanner.programme',
-            'sort_on': 'start', 'sort_order': 'descending'
+            'sort_on': 'start', 'sort_order': 'ascending',
+            'start': {
+                'query': DateTime(),
+                'range': 'min'
+            }
         })
 
         return [b.getObject() for b in brains[:5]]

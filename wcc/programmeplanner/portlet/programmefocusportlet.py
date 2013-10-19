@@ -111,6 +111,24 @@ class Renderer(base.Renderer):
         })
 
         return [b.getObject() for b in brains]
+
+
+    def item_day(self, item):
+        return item.date.strftime('%A')
+
+    def item_date(self, item):
+        return item.date.strftime('%e %b. %Y')
+
+    def item_time(self, item):
+        return '%s - %s' % (item.startTime, item.endTime)
+
+    def event_type_icon(self, event_type):
+        site = getSite()
+        return '%s/++resource++wcc.programmeplanner/images/%s-icon.png' % (
+            site.absolute_url(),
+            event_type
+        )
+
         
 
 class AddForm(base.AddForm):

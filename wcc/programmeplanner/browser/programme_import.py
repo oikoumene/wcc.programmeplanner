@@ -55,6 +55,10 @@ class UploadForm(form.SchemaForm):
         for l in unicode_csv_reader(StringIO(f)):
             if l[0].lower().strip() == 'title':
                 continue
+            if len(l) > 8:
+                code = l[8]
+            else:
+                code = ''
             self.create(title=l[0].strip(), 
                         description=l[1].strip(), 
                         text=l[2].strip(), 
@@ -62,18 +66,23 @@ class UploadForm(form.SchemaForm):
                         endTime=l[4].strip(), 
                         date=parse_date(l[5]).date(),
                         event_type=l[6],
-                        focus_group=l[7])
+                        focus_group=l[7],
+                        code=code)
 
     def create(self, **params):
         dest = self.context
         match = re.match(r'.*\((.*?)\)$',
                 params['title'].strip().replace('\n',' '))
-        if not match:
-            raise ValueError(params['title'])
-        code = match.groups()[0].upper().strip()
+        if match:
+            code = match.groups()[0].upper().strip()
+        else:
+            if params['code'].strip().upper():
+                code = params['code'].strip().upper()
+            else:
+                code = None
 
         item = createContentInContainer(dest, 'wcc.programmeplanner.programme',
-            title=code.replace(' ',''))
+            title=params['title'])
 
         item.code = code
         item.setTitle(params['title'])

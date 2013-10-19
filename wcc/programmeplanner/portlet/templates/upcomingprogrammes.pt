@@ -4,7 +4,8 @@
     <h2 tal:content="view/data/title"></h2>
 
     <div tal:repeat="item view/upcoming" class="upcoming-item">
-        <h5 tal:content="item/Title"></h5>
+        <h5><a tal:attributes="href item/absolute_url"
+                tal:content="item/Title"></a></h5>
         <div>
             <img
                 style="width:25px" 
