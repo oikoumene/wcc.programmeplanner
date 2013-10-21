@@ -43,5 +43,5 @@
 }
 
 .portletProgrammeHighlight dd a {
-    border-bottom:none;
+    border-bottom:none !important;
 }
