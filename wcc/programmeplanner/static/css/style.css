@@ -41,3 +41,7 @@
 .upcoming-item {
     margin-top:10px;
 }
+
+.portletProgrammeHighlight dd a {
+    border-bottom:none;
+}
