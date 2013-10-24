@@ -87,8 +87,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td></td>
-                            <td style="text-align: right">
+                            <td colspan="2">
                                 <input type="submit" i18n:attributes="value search"
                                     value="Search"/> 
                             </td>
