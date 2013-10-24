@@ -3,7 +3,7 @@
 
     <dt class="portletHeader">
         <span class="portletTopLeft"></span>
-        Programmes related to <span tal:content="view/focus_group"></span> 
+        <span tal:content="view/data/header"></span>
         <span class="portletTopRight"></span>
     </dt>
 
@@ -15,7 +15,8 @@
                 tal:attributes="src python:view.event_type_icon(item.event_type)"/>
             <div class="event-info"
                 style="float:left;width:130px">
-                <h4 tal:content="item/Title"></h4>
+                <h4><a tal:attributes="href item/absolute_url"
+                        tal:content="item/Title"></a></h4>
                 <p class="e-desc" tal:content="item/Description"></p>
                 <p>
                     <span tal:content="python:view.item_day(item)">Wednesday</span>
@@ -30,6 +31,7 @@
     <div class="visualClear"></div>
     <dd class="portletFooter">
         <span class="portletBottomLeft"></span>
+            <a tal:attributes="href view/planner_url">Go to programme planner</a>
         <span class="portletBottomRight"></span>
     </dd>
 

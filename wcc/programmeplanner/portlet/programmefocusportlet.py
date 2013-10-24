@@ -30,6 +30,11 @@ class IProgrammeFocusPortlet(IPortletDataProvider):
     """
     Define your portlet schema here
     """
+
+    header = schema.TextLine(
+        title=_(u'Heading'),
+        default=u'Related activities in the assembly programme'
+    )
     target_programmeplanner = schema.Choice(
         title=_(u"Target programmeplanner"),
         description=_(u"Find the programmeplanner which provides the items to list"),
@@ -47,6 +52,8 @@ class IProgrammeFocusPortlet(IPortletDataProvider):
 
 class Assignment(base.Assignment):
     implements(IProgrammeFocusPortlet)
+
+    header = u'Related activities in the assembly programme'
 
     def __init__(self, **kwargs):
         for k, v in kwargs.items():
@@ -96,6 +103,14 @@ class Renderer(base.Renderer):
                 result = None
         return result
 
+    def planner_url(self):
+        planner = self.programmeplanner()
+        if not planner:
+            return '#'
+        return '%s/programmesearch?focus_group=gender&event_type=all&start_time=all' % (
+            planner.absolute_url()
+        )
+
     def items(self):
 
         planner = self.programmeplanner()
@@ -111,7 +126,7 @@ class Renderer(base.Renderer):
             'focus_group': self.data.focus_group
         })
 
-        return [b.getObject() for b in brains]
+        return [b.getObject() for b in brains[:3]]
 
 
     def item_day(self, item):
