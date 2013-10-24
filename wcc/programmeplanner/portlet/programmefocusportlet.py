@@ -24,7 +24,7 @@ from plone.app.form.widgets.uberselectionwidget import UberSelectionWidget
 from zope.schema.interfaces import IVocabularyFactory
 from zope.component import getUtility
 from zope.component.hooks import getSite
-
+from DateTime import DateTime
 
 class IProgrammeFocusPortlet(IPortletDataProvider):
     """
