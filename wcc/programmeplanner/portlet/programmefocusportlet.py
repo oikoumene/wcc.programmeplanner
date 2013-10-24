@@ -123,7 +123,12 @@ class Renderer(base.Renderer):
                 'depth': 5
             },
             'portal_type': 'wcc.programmeplanner.programme',
-            'focus_group': self.data.focus_group
+            'focus_group': self.data.focus_group,
+            'sort_on': 'start', 'sort_order': 'ascending',
+            'start': {
+                'query': DateTime(),
+                'range': 'min'
+            }
         })
 
         return [b.getObject() for b in brains[:3]]
